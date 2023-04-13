@@ -20,4 +20,6 @@ if menor > numero2:
 if menor > numero3:
     menor = numero3 
 
+
+
 #github.com/tiagodefendi
