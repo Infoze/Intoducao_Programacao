@@ -4,7 +4,9 @@
 
 numero = int(input('Escolha um valor para o número: '))
 
-if numero >= 0 and numero <=9:
+if numero < 0 or numero >9:
+    print(f'ERRO! O número {numero} não está no intervalo [0, 9]')
+else:
     if numero == 0:
         print(f'O número {numero} escrito por extenso é: Zero')
     elif numero == 1:
@@ -25,7 +27,5 @@ if numero >= 0 and numero <=9:
         print(f'O número {numero} escrito por extenso é: Oito')
     else:
         print(f'O número {numero} escrito por extenso é: Nove')
-else:
-    print(f'ERRO! O número {numero} não está no intervalo [0, 9]')
     
 #github.com/tiagodefendi
