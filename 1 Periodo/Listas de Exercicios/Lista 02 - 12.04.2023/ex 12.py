@@ -3,13 +3,12 @@
 independente do mesmo ser informado como minúscula ou maiúscula.
 '''
 
-letra = str(input('Escolha caractere para a variável: '))
-letraNumero = ord(letra)
+caractere = str(input('Escolha caractere para a variável: '))
+caractereNumero = ord(caractere)
 
-
-if (letraNumero >= 65 and letraNumero <= 90) or (letraNumero >= 97 and letraNumero >= 122):
-    print(f'O caractere "{letra}" é uma letra')
+if (caractereNumero >= 65 and caractereNumero <= 90) or (caractereNumero >= 97 and caractereNumero <= 122):
+    print(f'O caractere "{caractere}" é uma letra')
 else:
-    print(f'O caractere "{letra}" não é uma letra')
+    print(f'O caractere "{caractere}" não é uma letra')
 
 #github.com/tiagodefendi
