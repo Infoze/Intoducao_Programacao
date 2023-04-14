@@ -15,4 +15,14 @@ n    | n%10 | n/10
 **Atenção**: você não deve converter o número para str. Ele deve ser sempre tratado como int.
 '''
 
+numero = int(input('Escolha um valor de 5 dígitos para um número: '))
+
+unidade = numero%10
+dezena = numero//10%10
+centena = numero//100%10
+unidadeMilhar = numero//1000%10
+dezenaMilhar = numero//10000%10
+
+print(f'O número {numero} pode ser impresso separadamente como: {dezenaMilhar} - {unidadeMilhar} - {centena} - {dezena} - {unidade}')
+
 #github.com/tiagodefendi
