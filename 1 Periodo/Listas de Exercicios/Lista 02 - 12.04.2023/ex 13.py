@@ -10,7 +10,7 @@ caractereNumero = ord(caractere)
 if (caractereNumero >= 65 and caractereNumero <= 90) or (caractereNumero >= 97 and caractereNumero <= 122):
     if caractereNumero >= 65 and caractereNumero <= 90:
         print(f'O caractere "{caractere}" é uma letra')
-    if caractereNumero >= 97 and caractereNumero <= 122:
+    else:
         print(f'O caractere "{chr(caractereNumero-32)}" é uma letra')
 else:
     print(f'O caractere "{caractere}" não é uma letra')
