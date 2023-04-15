@@ -11,4 +11,24 @@ Expressão:
 20 / 3 = 6.67
 '''
 
+operacao = input('Escolha a operação para a calculadora realizar: ')
+numero1 = int(input('Escolha um valor para o 1º número: '))
+numero2 = int(input('Escolha um valor para o 2º número: '))
+
+if operacao == '+':
+    print(f'O resultado de {numero1} {operacao} {numero2} = {numero1 + numero2}')
+elif operacao == '-':
+    print(f'O resultado de {numero1} {operacao} {numero2} = {numero1 - numero2}')
+elif operacao == '*':
+    print(f'O resultado de {numero1} {operacao} {numero2} = {numero1 * numero2}')
+elif operacao == '/':
+    print(f'O resultado de {numero1} {operacao} {numero2} = {numero1 / numero2}')
+elif operacao == '%':
+    print(f'O resultado de {numero1} {operacao} {numero2} = {numero1 % numero2}')
+elif operacao == '//':
+    print(f'O resultado de {numero1} {operacao} {numero2} = {numero1 // numero2}')
+elif operacao == '**':
+    print(f'O resultado de {numero1} {operacao} {numero2} = {numero1 ** numero2}')
+
+
 #github.com/tiagodefendi
