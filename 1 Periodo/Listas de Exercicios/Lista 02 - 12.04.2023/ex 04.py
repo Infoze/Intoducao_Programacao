@@ -25,7 +25,7 @@ else:
         print(f'O número {numero} escrito por extenso é: Sete')
     elif numero == 8:
         print(f'O número {numero} escrito por extenso é: Oito')
-    else:
+    elif numero == 9:
         print(f'O número {numero} escrito por extenso é: Nove')
     
 #github.com/tiagodefendi

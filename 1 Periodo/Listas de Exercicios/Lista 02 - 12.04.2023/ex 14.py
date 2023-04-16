@@ -14,7 +14,7 @@ if (caractereNumero >= 65 and caractereNumero <= 90) or (caractereNumero >= 97 a
     else:
         print(f'O caractere "{caractere}" é uma consoante')
 elif caractereNumero >= 48 and caractereNumero <= 57:
-    print(f'O caractere "{caractere}" não é uma letra')
+    print(f'O caractere "{caractere}" é um número')
 else:
     print(f'O caractere "{caractere}" é um símbolo na tabela ASCII')
 
