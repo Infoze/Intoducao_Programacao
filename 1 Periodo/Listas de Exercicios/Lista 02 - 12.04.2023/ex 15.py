@@ -30,5 +30,4 @@ elif operacao == '//':
 elif operacao == '**':
     print(f'O resultado de {numero1} {operacao} {numero2} = {numero1 ** numero2}')
 
-
 #github.com/tiagodefendi
