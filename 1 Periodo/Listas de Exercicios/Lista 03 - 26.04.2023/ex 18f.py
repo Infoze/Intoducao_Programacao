@@ -11,6 +11,6 @@ for impar in range(1, numero*2):
     if impar % 2 == 1:
         quadrado += impar
 
-print(quadrado)
+print(f'O quadrado do número {numero} é {quadrado}')
 
 #github.com/tiagodefendi
