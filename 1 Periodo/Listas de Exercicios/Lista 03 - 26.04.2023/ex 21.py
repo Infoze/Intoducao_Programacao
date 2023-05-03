@@ -44,14 +44,12 @@ if votosCandidato3 > maior:
 if votosCandidato4 > maior:
     maior = votosCandidato2
 
-print(f'''
-      Candidato1 = {votosCandidato1}
-      Candidato2 = {votosCandidato2}
-      Candidato3 = {votosCandidato2}
-      Candidato4 = {votosCandidato2}
-      Nulos = {votosNulos}
-      Brancos = {votosBrancos}
-      Mais votos + Brancos = {maior + votosBrancos}
-      ''')
+print(f'Candidato1 = {votosCandidato1}')
+print(f'Candidato2 = {votosCandidato2}')
+print(f'Candidato3 = {votosCandidato3}')
+print(f'Candidato4 = {votosCandidato4}')
+print(f'Votos Nulos = {votosNulos}')
+print(f'Votos Brancos = {votosBrancos}')
+print(f'Mais votado + Brancos = {maior + votosBrancos}')
 
 #github.com/tiagodefendi

@@ -6,8 +6,12 @@ Quantos ímpares deseja?: 11
 
 numeroImpares = int(input('Escolha um valor para o número de ímpares: '))
 
-for numero in range(0, numeroImpares*2):
-    if (numero % 2 == 1):
-        print(numero, end=' ')
+numero = 1
+contador = 1
+
+while contador <= numeroImpares:
+    print(numero, end=' ')
+    numero += 2
+    contador += 1
 
 #github.com/tiagodefendi

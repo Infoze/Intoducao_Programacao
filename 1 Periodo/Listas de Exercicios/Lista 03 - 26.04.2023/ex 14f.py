@@ -10,6 +10,22 @@ i. resto de 42 por 10 é 2 (dígito verificador).
 c. Comparar o dígito verificador encontrado com o último dígito do número serial.
 '''
 
+numero = int(input('Escolha um valor para verificar se ele é um serial válido: '))
 
+numero10Digitos = numero // 10
+numeroVerificador = numero % 10
+
+resto = 0
+soma = 0
+
+for c in range(1, 11):
+    resto = numero10Digitos % 10
+    numero10Digitos //= 10
+    soma += resto
+
+if soma % 10 == numeroVerificador:
+    print(f'O número serial({numero}) está correto')
+else:
+    print(f'O número serial({numero} não está correto)')
 
 #github.com/tiagodefendi
