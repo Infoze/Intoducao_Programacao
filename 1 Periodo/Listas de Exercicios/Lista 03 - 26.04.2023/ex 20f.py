@@ -12,6 +12,6 @@ for memoria in range(0, limite):
     memoria = numero2
     numero2 = numero1 + numero2
     numero1 = memoria
-print(numero2)
+print(f'O valor do {limite}º termo na sequencia de fibonacci é {numero2}')
 
 #github.com/tiagodefendi
