@@ -7,10 +7,13 @@ seu quadrado usando a soma de ímpares.
 numero = int(input('Escolha um valor para saber seu quadrado: '))
 
 quadrado = 0
+contador = 1
+impar = 1
 
-for impar in range(1, numero*2):
-    if impar % 2 == 1:
-        quadrado += impar
+while contador <= numero:
+    quadrado += impar
+    impar += 2
+    contador += 1
 
 print(f'O quadrado do número {numero} é {quadrado}')
 
