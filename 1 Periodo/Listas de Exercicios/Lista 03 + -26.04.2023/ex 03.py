@@ -12,7 +12,6 @@ contador = 1
 
 unidade = 0
 dezena = 0
-centena = 0
 
 #while
 memoria = numero
@@ -30,40 +29,12 @@ while memoria % 10 > 0 or memoria // 10 > 0:
         unidade = memoria % 10
     if contador == 2:
         dezena = memoria % 10
-    if contador == 3:
-        centena = memoria % 10
     memoria //= 10
     contador += 1
 
 #print
-if contador <= 4:
+if contador <= 3:
     print(f'O número {numero} por extenso é: ', end='')
-
-    #centena
-    if centena == 1:
-        if dezena == 0 and unidade == 0:
-            print('cem')
-        else:
-            print('cento', end='')
-    elif centena == 2:
-        print('duzentos', end='')
-    elif centena == 3:
-        print('trezentos', end='')
-    elif centena == 4:
-        print('quatrocentos', end='')
-    elif centena == 5:
-        print('quinhentos', end='')
-    elif centena == 6:
-        print('seiscentos', end='')
-    elif centena == 7:
-        print('setecentos', end='')
-    elif centena == 8:
-        print('oitocentos', end='')
-    elif centena == 9:
-        print('novecentos', end='')
-
-    if (dezena != 0 or unidade != 0) and centena != 0:
-        print(' e ', end='')
 
     #dezena
     if dezena == 1:
@@ -133,10 +104,10 @@ if contador <= 4:
     else:
         print('(positivo)')
 else:
-    if numero > 999:
-        print(f'EROO! O número {numero} é maior que 999')
+    if numero > 99:
+        print(f'EROO! O número {numero} é maior que 99')
     else:
-        print(f'ERRO! O número {numero} é menor que -999')
+        print(f'ERRO! O número {numero} é menor que -99')
 
 #github.com/tiagodefendi
 
