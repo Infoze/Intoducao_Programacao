@@ -29,5 +29,4 @@ while contador <= menor:
 
 print(f'O Máximo Divisor Comum de {numero1} e {numero2} é {mdc}')
 
-
 #github.com/tiagodefendi
