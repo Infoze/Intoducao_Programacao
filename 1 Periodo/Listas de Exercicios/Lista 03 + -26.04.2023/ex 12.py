@@ -13,8 +13,16 @@ X
 caracter = input('Escolha um valor para o carcter: ')
 numero = int(input('Escolha um valor para o tamanho do triângulo: '))
 
-while numero > 0:
-    print(caracter * numero)
-    numero -= 1
+limite = numero
+linha = 1
+
+while limite >= 1:
+    if linha % limite != 0:
+        print(caracter, end='')
+        linha += 1
+    else:
+        print(caracter)
+        limite -= 1
+        linha = 1
 
 #github.com/tiagodefendi
