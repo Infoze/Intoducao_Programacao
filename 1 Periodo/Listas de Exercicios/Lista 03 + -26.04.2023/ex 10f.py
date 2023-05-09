@@ -16,7 +16,10 @@ caracter = input('Escolha um caracter para montar uma caixa: ')
 largura = int(input('Escolha um valor para a largura: '))
 altura = int(input('Escolha um valor para a altura: '))
 
-for contador in range(0, altura):
-    print(caracter*largura)
+for contador in range(1, altura*largura+1):
+    if contador % largura != 0:
+        print(caracter, end='')
+    else:
+        print(caracter)
 
 #github.com/tiagodefendi

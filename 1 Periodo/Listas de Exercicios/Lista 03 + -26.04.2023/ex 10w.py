@@ -18,8 +18,11 @@ altura = int(input('Escolha um valor para a altura: '))
 
 contador = 1
 
-while contador <= altura:
-    print(caracter*largura)
+while contador <= altura*largura:
+    if contador % largura != 0:
+        print(caracter, end='')
+    else:
+        print(caracter)
     contador += 1
 
 #github.com/tiagodefendi
