@@ -13,20 +13,20 @@ from random import randint as rd
 def print_random2(number:int, left:int, right:int) -> tuple[int, int]:
 
     random = rd(left, right)
-    maior = random
-    menor = random
+    highter = random
+    smaller = random
     print(random, end=' ')
     for c in range(1, number):
 
         random = rd(left, right)
         print(random, end=' ')
-        if random > maior:
-            maior = random
-        elif random < menor:
-            menor = random
+        if random > highter:
+            highter = random
+        elif random < smaller:
+            smaller = random
     print()
-    print(f'Maior: {maior}')
-    print(f'Menor: {menor}')
+    print(f'Higher: {highter}')
+    print(f'Smaller: {smaller}')
 
 def main():
     print_random2(3, 1, 10)
