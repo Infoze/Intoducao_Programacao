@@ -14,26 +14,22 @@ o--------o
 o--------o
 '''
 
-def print_box(height:int, width:int, fill:str, vertex:str) -> str:
-    for c in range(1, height* width+1):
-        #vertex
-        if (c == 1) or (c == width * height - width+1) or (c == height * width):
-            print(f'{vertex}', end='')
-        elif (c == width):
-            print(f'{vertex}')
-        #edge
-        #
-        elif (c // width == 0 or c // width == height - 1) and c%width != 0:
-            print('-', end='')
-        #
-        elif c % width == 1:
-            print('|', end='')
-
-        elif c % width == 0:
-            print('|')
-        #fill
+def print_line(number:int, fill:str, edge:str):
+    for c in range(number):
+        if c == 0 or c == (number-1):
+            print(f'{edge}', end='')
         else:
             print(f'{fill}', end='')
+    print()
+
+def print_box(height:int, width:int, fill:str, vertex:str) -> str:
+    for c in range(1, height+1):
+        #vertex
+        if c == 1 or c == height:
+            print_line(width, '-', vertex)
+        #fill
+        else:
+            print_line(width, fill, '|')
     print()
 
 def main():
