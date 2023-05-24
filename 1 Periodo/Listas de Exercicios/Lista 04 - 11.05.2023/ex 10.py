@@ -13,25 +13,28 @@ from random import randint as rd
 def print_random2(number:int, left:int, right:int) -> tuple[int, int]:
 
     random = rd(left, right)
-    highter = random
+    higher = random
     smaller = random
     print(random, end=' ')
     for c in range(1, number):
-
         random = rd(left, right)
         print(random, end=' ')
-        if random > highter:
-            highter = random
+        if random > higher:
+            higher = random
         elif random < smaller:
             smaller = random
     print()
-    print(f'Higher: {highter}')
-    print(f'Smaller: {smaller}')
+    return smaller, higher
 
 def main():
-    print_random2(3, 1, 10)
-    print_random2(6, 5, 25)
-    print_random2(50, -500, 500)
+    min, max = print_random2(3, 1, 10)
+    print(f'min:{min}, max:{max}')
+
+    min, max = print_random2(6, 5, 25)
+    print(f'min:{min}, max:{max}')
+
+    min, max = print_random2(50, -500, 500)
+    print(f'min:{min}, max:{max}')
 main()
 
 #github.com/tiagodefendi

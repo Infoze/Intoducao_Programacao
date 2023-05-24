@@ -14,10 +14,13 @@ from random import randint as rd
 
 def is_prime(number:int) -> bool:
     prime_anal = True
-    for c in range(2, number):
-        if number % c == 0:
-            prime_anal = False
-            break
+    if number != 1 or number != 0:
+        for c in range(2, number):
+            if number % c == 0:
+                prime_anal = False
+                break
+    else:
+        prime_anal = False
     return prime_anal
 
 def is_pair(number:int)-> bool:
@@ -28,22 +31,27 @@ def is_pair(number:int)-> bool:
 
 def rand_report(number:int, left:int, right:int) -> tuple[int, int]:
     pair_counter = int()
-    prime_couter = int()
+    prime_counter = int()
     for c in range(number):
         random = rd(left, right)
         print(random, end=' ')
         if is_pair(random) == True:
             pair_counter += 1
         if is_prime(random) == True:
-            prime_couter += 1
+            prime_counter += 1
     print()
-    print(f'Pairs: {pair_counter}')
-    print(f'Primes: {prime_couter}')
+    return pair_counter, prime_counter
 
 def main():
-    rand_report(5, 0, 6)
-    rand_report(10, 4, 5)
-    rand_report(50, -500, 500)
+    pairs, primes = rand_report(5, 0, 6)
+    print(f'pairs: {pairs}, primes:{primes}')
+
+    pairs, primes = rand_report(10, 4, 5)
+    print(f'pairs: {pairs}, primes:{primes}')
+
+    pairs, primes = rand_report(50, -500, 500)
+    print(f'pairs: {pairs}, primes:{primes}')
+
 main()
 
 #github.com/tiagodefendi

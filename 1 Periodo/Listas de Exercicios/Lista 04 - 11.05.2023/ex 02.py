@@ -22,12 +22,12 @@ def summation(number:int) -> int:
     return sum
 
 def summation_product(number1:int, number2:int):
-    return number1 * number2
+    return summation(number1) * summation(number2)
 
 def main():
-    print(summation_product(summation(5),summation(3)))
-    print(summation_product(summation(2),summation(10)))
-    print(summation_product(summation(0),summation(7)))
+    print(summation_product(5, 3))
+    print(summation_product(2, 10))
+    print(summation_product(0, 7))
 main()
 
 #github.com/tiagodefendi
