@@ -5,8 +5,9 @@
 '''
 
 def reverse_list(vet:list):
-    for i in range(len(vet)//2):
-        vet[i] = vet[len(vet)-i]
+    for i in range(1,len(vet)//2):
+        vet[i], vet[-(i+1)] = vet[-(i+1)], vet[1]
+
 
 def main():
     vet = [1,2,3,4]
