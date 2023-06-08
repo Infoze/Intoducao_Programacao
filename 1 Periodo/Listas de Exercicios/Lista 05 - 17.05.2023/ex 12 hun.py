@@ -35,11 +35,53 @@ Teclas: A⇦W⇧D⇨S⇩       Teclas: A⇦W⇧D⇨S⇩       Teclas: A⇦W⇧D�
 Função: def move_a_move(m: int)
 '''
 
+def print_line(number:int, fill:str, edge:str, edge2:str, char:str, char_locate:int):
+    for c in range(number):
+        if c == 0:
+            print(f'{edge}', end='')
+        elif c == (number-1):
+            print(f'{edge2}', end='')
+        elif c == char_locate:
+            print(f'{char}', end='')
+        else:
+            print(f'{fill}', end='')
+    print()
+
 def move_a_move():
-    pass
+    quit = ''
+    char = ''
+    height = 5
+    width = 10
+    while quit != 'Q':
+        print_box(height, width)
+        char = input('> ').upper()
+        for c in char:
+            print(c)
+            if c == 'W' and height - 1 != 0:
+                height -= 1
+            elif c == 'S' and height + 1 != 9:
+                height += 1
+            if c == 'D' and width + 1 != 19:
+                width += 1
+            elif c == 'A' and width - 1 != 0:
+                width -= 1
+
+            if c == 'Q':
+                quit = 'Q'
+
+def print_box(height:int , widht:int):
+    for i in range(10):
+        if i == 0:
+            print_line(20, '═', '╔', '╗', '', 0)
+        elif i == 9:
+            print_line(20, '═', '╚', '╝', '', 0)
+        elif i == height:
+            print_line(20, ' ', '║', '║', '#', widht)
+        else:
+            print_line(20, ' ', '║', '║', '', 0)
 
 def main():
-    move_a_move
+    move_a_move()
 
 if __name__ == '__main__':
     main()
