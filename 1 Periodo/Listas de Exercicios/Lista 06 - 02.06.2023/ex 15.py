@@ -6,12 +6,10 @@
 
 def remove_all(vet:list, elem:int):
     index = 0
-    counter = 0
-    is_in_vet = True
-    while is_in_vet == True:
+    while index < len(vet):
         if vet[index] == elem:
             vet.pop(index)
-            counter += 1
+            index -= 1
         index += 1
 
 def main():
