@@ -6,11 +6,9 @@
 
 def list_sum(vet: list) -> float:
     sum = int()
-    counter = int()
     for e in vet:
         sum += e
-        counter += 1
-    return sum/counter
+    return sum/len(vet)
 
 def main():
     print(list_sum([1, 2, 3]))
